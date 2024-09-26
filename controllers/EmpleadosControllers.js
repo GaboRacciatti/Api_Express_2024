@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const baseURL = 'https://66f2ca6e71c84d805876bcdb.mockapi.io/api/v1'
+const baseURL = process.env.MOCK_API_URL_EMPLEADOS
 
 exports.getAllEmpleados = async (req, res) => {
   try {
