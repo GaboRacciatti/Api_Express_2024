@@ -44,4 +44,6 @@ exports.filterEmpleados = async (req, res) => {
     res.status(200).json({ status: 'ok', data: response.data })
   } catch (error) {
     console.error('Error filtering empleados:', error)
-    res.status(500).json({ status: 'error', msg:
+    res.status(500).json({ status: 'error', msg:'Error al filtrar los empleados' })
+    }
+  }
