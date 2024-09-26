@@ -27,15 +27,15 @@ Esta API permite la gestión de empleados utilizando **Express** y **Axios** par
    npm run lint
 
 ## Dependencias
-axios: ^1.7.7 - Cliente HTTP basado en promesas para el navegador y Node.js.
+#### axios: ^1.7.7 - Cliente HTTP basado en promesas para el navegador y Node.js.
 
-dotenv: ^16.4.5 - Carga variables de entorno desde un archivo .env.
+#### dotenv: ^16.4.5 - Carga variables de entorno desde un archivo .env.
 
-express: ^4.21.0 - Framework para crear servidores web en Node.js.
+#### express: ^4.21.0 - Framework para crear servidores web en Node.js.
 
-standard: ^17.1.2 - Herramienta de linting para mantener el código consistente y limpio.
+#### standard: ^17.1.2 - Herramienta de linting para mantener el código consistente y limpio.
 
-husky: ^9.1.6 - Pre-commit hooks para automatizar tareas como linting.
+#### husky: ^9.1.6 - Pre-commit hooks para automatizar tareas como linting.
 
 ## Endpoints
 ### 1. Obtener todos los empleados
