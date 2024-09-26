@@ -9,6 +9,7 @@ Esta API permite la gestión de empleados utilizando **Express** y **Axios** par
 
 ### Requisitos previos
 - [Node.js](https://nodejs.org/) (versión 12 o superior)
+  
 - [npm](https://www.npmjs.com/) (gestor de paquetes de Node.js)
 
 ### Pasos para instalar
@@ -27,12 +28,16 @@ Esta API permite la gestión de empleados utilizando **Express** y **Axios** par
 
 ## Dependencias
 axios: ^1.7.7 - Cliente HTTP basado en promesas para el navegador y Node.js.
+
 dotenv: ^16.4.5 - Carga variables de entorno desde un archivo .env.
+
 express: ^4.21.0 - Framework para crear servidores web en Node.js.
+
 standard: ^17.1.2 - Herramienta de linting para mantener el código consistente y limpio.
+
 husky: ^9.1.6 - Pre-commit hooks para automatizar tareas como linting.
 
-##Endpoints
+## Endpoints
 ### 1. Obtener todos los empleados
 Descripción: Devuelve una lista de todos los empleados.
 
