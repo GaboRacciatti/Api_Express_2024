@@ -3,7 +3,9 @@
 ## Integrante 1: Racciatti Gabriel
 
 ## Descripción
-Esta API permite la gestión de empleados utilizando **Express** y **Axios** para realizar solicitudes HTTP a un servidor remoto. Incluye la obtención de todos los empleados, la búsqueda de empleados por ID, y el filtrado de empleados por nombre y sexo.
+Esta API permite la gestión de empleados utilizando **Express** y **Axios** para realizar solicitudes HTTP a un servidor remoto.
+
+Incluye la obtención de todos los empleados, la búsqueda de empleados por ID, y el filtrado de empleados por nombre y sexo.
 
 ## Instalación
 
@@ -13,6 +15,7 @@ Esta API permite la gestión de empleados utilizando **Express** y **Axios** par
 - [npm](https://www.npmjs.com/) (gestor de paquetes de Node.js)
 
 ### Pasos para instalar
+
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/GaboRacciatti/Api_Express_2024
@@ -38,12 +41,17 @@ Esta API permite la gestión de empleados utilizando **Express** y **Axios** par
 #### husky: ^9.1.6 - Pre-commit hooks para automatizar tareas como linting.
 
 ## Endpoints
+
 ### 1. Obtener todos los empleados
+
 Descripción: Devuelve una lista de todos los empleados.
 
 Método: GET
+
 Ruta: http://localhost:3000/api/v1/Empleado
+
 Respuesta:
+
    ```bash
       {
         "status": "ok",
@@ -65,13 +73,19 @@ Errores:
 }
 ```
 ### 2. Obtener empleado por ID
+
 Descripción: Devuelve los datos de un empleado específico por su ID.
 
 Método: GET
+
 Ruta:http://localhost:3000/api/v1/Empleado/:id
+
 Parámetros:
+
 id (obligatorio): El ID del empleado que se desea obtener.
+
 Respuesta:
+
    ```bash
    {
   "nombre": "Joyce",
@@ -110,10 +124,15 @@ los siguientes:
 # &
 
 nombre (opcional): Filtra empleados cuyo nombre coincide con el valor proporcionado.
+
 sexo (opcional): Filtra empleados por sexo. Los valores aceptados son male y female.
+
 Ejemplo de URL:
+
 http://localhost:3000/api/v1/Empleado/filter?nombre=Joyce
+
 Respuesta:
+
    ```bash
 [
   {
@@ -125,7 +144,9 @@ Respuesta:
 ]
 ```
 Errores:
+
 Si se proporciona un valor inválido para sexo:
+
    ```bash
 {
   "status": "error",
@@ -133,6 +154,7 @@ Si se proporciona un valor inválido para sexo:
 }
 ```
 Si no se proporcionan parámetros de filtrado:
+
    ```bash
 {
   "status": "error",
