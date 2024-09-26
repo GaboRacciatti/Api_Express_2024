@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const empleadoController = require('../controllers/EmpleadosControllers')
-
-router.get('/', empleadoController.getAllEmpleados) // Listado de empleados
-router.get('/:id', empleadoController.getEmpleadoById) // Obtener un empleado por ID
-router.get('/filter', empleadoController.filterEmpleados) // Filtrar empleados
+// rutas gabriel racciatti
+router.get('/filter', empleadoController.filterEmpleados)
+router.get('/', empleadoController.getAllEmpleados)
+router.get('/:id', empleadoController.getEmpleadoById)
 
 module.exports = router
