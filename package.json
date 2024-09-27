@@ -12,10 +12,11 @@
     "husky": "^9.1.6"
   },
   "scripts": {
-    "prepare": "chmod +x .husky/* && husky install",
-  "lint": "node app.js",
-  "lint.fix": "standard --fix",
-  "start": "node app.js",       
-  "dev": "nodemon app.js"
-}
+    "prepare": "husky install",
+    "postinstall": "if [ -d .husky ]; then chmod +x .husky/*; fi",
+    "lint": "node app.js",
+    "lint.fix": "standard --fix",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  }
 }
