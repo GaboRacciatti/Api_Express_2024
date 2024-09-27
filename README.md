@@ -164,7 +164,7 @@ Si no se proporcionan parámetros de filtrado:
 
 # API de Gestión de Areas
 
-## Integrante 1: Alvarez Moreno Agustin 
+## Integrante 2: Alvarez Moreno Agustin 
 
 ## Descripción
 Esta API permite la gestión de Areas utilizando **Express** y **Axios** para realizar solicitudes HTTP a un servidor remoto.
