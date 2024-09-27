@@ -1,4 +1,5 @@
 const express = require('express')
+
 const AreaRoutes = require('../routes/Area')
 
 class Server {
@@ -16,6 +17,7 @@ class Server {
   }
 
   rutas () {
+    
     this.app.use('/api/v1/Area', AreaRoutes)
   }
 
