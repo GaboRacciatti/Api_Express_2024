@@ -44,19 +44,19 @@ const getAreaById = async (req, res) => {
 }
 
 const filterArea = async (req, res) => {
-  const { name = '', cantEmpleadosArea } = req.query
+  const { name = '', cantEmpleadosArea = null } = req.query
 
   try {
-    if (name === '' && cantEmpleadosArea === null) { // si no se proporciona nombre ni sexo, se devuelven todos los empleados
+    if (name === '' && cantEmpleadosArea === null) {
       res.status(401).json({ status: 'error', msg: 'Error al enviar los filtros' })
       return
     }
 
-    let filtros = '' // si se proporciona nombre o sexo, se filtran los empleados
+    let filtros = ''
     let operador = '?'
 
     if (name !== '') {
-      filtros += `${operador}name=${encodeURIComponent(name)}` // encodeURIComponent convierte el nombre en una cadena codificada
+      filtros += `${operador}name=${encodeURIComponent(name)}`
       operador = '&'
     }
 
@@ -70,7 +70,7 @@ const filterArea = async (req, res) => {
     res.status(200).json({ status: 'ok', data: response.data })
   } catch (error) {
     console.error('Error filtrando empleados:', error)
-    res.status(500).json({ status: 'error', msg: 'Error al filtrar los empleados', error })
+    res.status(500).json({ status: 'error', msg: 'Error al filtrar los empleados' })
   }
 }
 
