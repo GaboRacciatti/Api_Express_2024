@@ -1,5 +1,4 @@
 const express = require('express')
-const empleadoRoutes = require('../routes/EmpleadoRoutes')
 const AreaRoutes = require('../routes/Area')
 
 class Server {
@@ -17,7 +16,6 @@ class Server {
   }
 
   rutas () {
-    this.app.use('/api/v1/Empleado', empleadoRoutes)
     this.app.use('/api/v1/Area', AreaRoutes)
   }
 
