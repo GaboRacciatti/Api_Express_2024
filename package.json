@@ -8,12 +8,7 @@
   "eslintConfig": {
     "extends": "standard"
   },
-  "devDependencies": {
-    "husky": "^9.1.6"
-  },
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "if [ -d .husky ]; then chmod +x .husky/*; fi",
     "lint": "node app.js",
     "lint.fix": "standard --fix",
     "start": "node app.js",
