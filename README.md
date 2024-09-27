@@ -173,3 +173,128 @@ Si no se proporcionan parámetros de filtrado:
 
       
 
+# API de Gestión de Areas
+
+## Integrante 2: Alvarez Moreno Agustin 
+
+## Descripción
+Esta API permite la gestión de Areas utilizando **Express** y **Axios** para realizar solicitudes HTTP a un servidor remoto.
+
+Incluye la obtención de todas las Areas, la búsqueda de area por ID, y el filtrado de areas por nombre y cantidad de empleados.
+
+## Endpoints
+
+### 1. Obtener todas las areas
+
+Descripción: Devuelve una lista de todas las areas.
+
+Método: GET
+
+Ruta: http://localhost:3000/api/v1/Area
+
+Respuesta:
+
+   ```bash
+      {
+"name": "Global Factors Liaison",
+"cantEmpleadosArea": 56,
+"id": "1"
+},
+          ...
+        ]
+      }
+```
+Errores:
+   ```bash
+{
+  "status": "error",
+  "msg": "Error al obtener las areas"
+}
+```
+### 2. Obtener area por ID
+
+Descripción: Devuelve los datos de un area específica por su ID.
+
+Método: GET
+
+Ruta:http://localhost:3000/api/v1/Empleado/:id
+
+Parámetros:
+
+id (obligatorio): El ID del area que se desea obtener.
+
+Respuesta:
+
+   ```bash
+   "name": "Global Factors Liaison",
+"cantEmpleadosArea": 56,
+"id": "1"
+}
+```
+Errores:
+Si el area no existe:
+   ```bash
+
+{
+  "status": "error",
+  "msg": "Area no encontrada"
+}
+```
+Error del servidor:
+   ```bash
+{
+  "status": "error",
+  "msg": "Error al obtener el area"
+}
+ ```
+### 3. Filtrar area por cantidad de empleados
+Descripción: Filtra el area por cantidad de empleados. Si no se proporcionan parámetros, devuelve un error.
+
+Método: GET
+
+Ruta: http://localhost:3000/api/v1/Empleado/filter
+
+Parámetros de consulta (query):
+El primero debe ser: 
+# ?
+los siguientes:
+# &
+
+nombre (opcional): Filtra area cuyo nombre coincide con el valor proporcionado.
+
+cantidad de empleados (opcional): Filtra area por cantidad de empleados.
+
+Ejemplo de URL:
+
+http://localhost:3000/api/v1/Empleado/filter?name=Product Web Strategist
+
+Respuesta:
+
+   ```bash
+[
+  {
+  "name": "Product Web Strategist",
+  "cantEmpleadosArea": 17,
+  "id": "5"
+  },
+]
+```
+Errores:
+
+Si se proporciona un valor inválido cantidad de empleados:
+
+   ```bash
+{
+  "status": "error",
+  "msg": "Error al enviar los filtros"
+}
+```
+Si no se proporcionan parámetros de filtrado:
+
+   ```bash
+{
+  "status": "error",
+  "msg": "Error al enviar los filtros"
+}
+```
+      
