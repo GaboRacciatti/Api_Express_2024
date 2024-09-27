@@ -1,6 +1,8 @@
 const express = require('express')
 const empleadoRoutes = require('../routes/EmpleadoRoutes')
 
+const AreaRoutes = require('../routes/Area')
+
 class Server {
   constructor () {
     this.app = express()
@@ -17,6 +19,8 @@ class Server {
 
   rutas () {
     this.app.use('/api/v1/Empleado', empleadoRoutes)
+    
+    this.app.use('/api/v1/Area', AreaRoutes)
   }
 
   listen () {
