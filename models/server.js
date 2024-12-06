@@ -23,7 +23,7 @@ class Server {
     this.app.use('/api/v1/Empleado', empleadoRoutes)
 
     this.app.use('/api/v1/Area', AreaRoutes)
-    
+
     this.app.use('/api/v1/Area', AreaRoutes)
   }
 
