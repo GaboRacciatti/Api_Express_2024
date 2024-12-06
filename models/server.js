@@ -1,5 +1,6 @@
 const express = require('express')
 const empleadoRoutes = require('../routes/EmpleadoRoutes')
+const cors = require('cors')
 
 class Server {
   constructor () {
@@ -12,11 +13,14 @@ class Server {
   }
 
   middlewares () {
+    this.app.use(cors())
     this.app.use(express.json())
   }
 
   rutas () {
     this.app.use('/api/v1/Empleado', empleadoRoutes)
+
+    this.app.use('/api/v1/Area', AreaRoutes)
   }
 
   listen () {
