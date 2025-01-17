@@ -162,6 +162,17 @@ Si no se proporcionan parámetros de filtrado:
 }
 ```
 
+
+
+
+
+ 
+
+
+
+
+      
+
 # API de Gestión de Areas
 
 ## Integrante 2: Alvarez Moreno Agustin 
