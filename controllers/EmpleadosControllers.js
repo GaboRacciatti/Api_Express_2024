@@ -7,7 +7,7 @@ exports.getAllEmpleados = async (req, res) => {
     console.log('obteniendo todos los empleados')
     const response = await axios.get(`${baseURL}/Empleado`)
     console.log('Response data:', response.data)
-    res.status(200).json({ status: 'ok', data: response.data })
+    res.status(200).json({ data: response.data })
   } catch (error) {
     console.error('Error obteniendo los empleados:', error) // hago un console.log para conocer el error en caso de que se presente
     res.status(500).json({ status: 'error', msg: 'Error al obtener los empleados' })
