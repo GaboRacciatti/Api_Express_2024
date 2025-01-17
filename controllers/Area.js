@@ -6,7 +6,6 @@ const getAllAreas = async (req, res) => {
   try {
     const response = await axios.get(`${baseURL}/Area`)
     res.status(200).json({
-      status: 'ok',
       data: response.data
     })
   } catch (error) {
