@@ -18,6 +18,8 @@ class Server {
 
   rutas () {
     
+    this.app.use('/api/v1/Empleado', empleadoRoutes)
+
     this.app.use('/api/v1/Area', AreaRoutes)
   }
 
